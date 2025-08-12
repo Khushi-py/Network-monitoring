@@ -2,21 +2,6 @@
 
 A comprehensive, real-time network monitoring solution built with Python that tracks bandwidth usage, system performance, device uptime, and provides intelligent anomaly detection with automated email alerts and a modern web dashboard.
 
-## 📋 Table of Contents
-- [🎯 What It Does](#-what-it-does)
-- [⚡ Why This Project](#-why-this-project)
-- [🏗️ How It Works](#️-how-it-works)
-- [💻 Tech Stack](#-tech-stack)
-- [🚀 Quick Start](#-quick-start)
-- [📊 Dashboard Features](#-dashboard-features)
-- [⚙️ Configuration](#️-configuration)
-- [🔧 Advanced Usage](#-advanced-usage)
-- [📈 Monitoring Features](#-monitoring-features)
-- [🚨 Alert System](#-alert-system)
-- [📊 Data Management](#-data-management)
-- [🛠️ Development](#️-development)
-- [🤝 Contributing](#-contributing)
-
 ## 🎯 What It Does
 
 This Network Monitoring and Alert System provides **enterprise-grade monitoring capabilities** for:
@@ -55,6 +40,50 @@ This Network Monitoring and Alert System provides **enterprise-grade monitoring 
 - **Historical data analysis** with configurable time ranges
 - **Device status overview** with visual indicators
 - **Alert management interface** with filtering and search
+
+  ### **Data Flow Process**
+
+1. **Data Collection**: Three concurrent threads collect metrics every 30-120 seconds
+2. **Processing**: Raw data is processed, analyzed for anomalies, and threshold violations
+3. **Storage**: All data is stored in JSON files with automatic cleanup (10,000 records max)
+4. **Alerting**: Threshold violations trigger email alerts with configurable cooldown periods
+5. **Visualization**: Dashboard reads stored data and presents real-time visualizations
+6. **Analysis**: Historical data enables trend analysis and capacity planning
+
+
+## 💻 Tech Stack
+
+### **Core Technologies**
+- **🐍 Python 3.7+**: Main programming language
+- **🔧 psutil**: System and network monitoring
+- **📊 Streamlit**: Web dashboard framework
+- **📈 Plotly**: Interactive data visualization
+- **🐼 Pandas**: Data manipulation and analysis
+- **📧 smtplib**: Email notification system
+- **🌐 scapy**: Advanced network packet analysis (optional)
+
+### **System Integration**
+- **🔄 Threading**: Concurrent monitoring operations
+- **� JSON**: Data persistence and configuration
+- **�🚀 systemd**: Linux service integration
+- **🖥️ Cross-platform**: Windows, macOS, Linux support
+- **📱 Responsive Design**: Mobile-friendly dashboard
+
+### **Development Tools**
+- **📝 Environment Variables**: Configuration management
+- **🧪 Unit Testing**: Comprehensive test suite
+- **📋 Logging**: Multi-level logging system
+- **🔍 Error Handling**: Robust exception management
+- **📖 Documentation**: Comprehensive README and code comments
+
+## 🚀 Quick Start
+
+### **Prerequisites**
+- Python 3.7 or higher
+- pip package manager
+- Network access for device monitoring
+- SMTP email account (Gmail recommended) for alerts
+  
 ---
 
 **Network Monitoring and Alert System** 🌐✨
